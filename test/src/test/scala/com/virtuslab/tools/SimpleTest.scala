@@ -5,7 +5,7 @@ import org.scalatest.{FlatSpec, Matchers}
 
 class SimpleTest  extends FlatSpec with Matchers with SparkSpec {
 
-  it should "copy contents of a source table to target table" in {
+  it should "simple hive insert" in {
     import spark.implicits._
 
     val row = TestRow("test1")
