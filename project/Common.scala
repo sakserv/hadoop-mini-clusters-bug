@@ -23,7 +23,8 @@ object Common {
     resolvers ++= Seq(
       "Hortonworks release" at "http://repo.hortonworks.com/content/repositories/releases/",
       "Hortonworks public" at "http://repo.hortonworks.com/content/groups/public"
-    )
+    ), 
+    dependencyOverrides := Dependencies.overrides
   )
 
 }

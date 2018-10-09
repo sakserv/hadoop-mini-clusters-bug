@@ -11,7 +11,7 @@ object HiveMetastoreSpec {
   val host = "localhost"
   val port = NetworkUtil.randomPort()
   val derbyDB = "target/mini-cluster/metastore_db"
-  val temporaryDirectory = "target/mini-cluster/warehouse_dir"
+  val warehouseDirectory = "target/mini-cluster/warehouse_dir"
   val scratchDir = "target/mini-cluster/scratch_dir"
   val uri = s"thrift://$host:$port"
 
@@ -20,7 +20,7 @@ object HiveMetastoreSpec {
     .setHiveMetastorePort(port)
     .setHiveMetastoreDerbyDbDir(derbyDB)
     .setHiveScratchDir(scratchDir)
-    .setHiveWarehouseDir(temporaryDirectory)
+    .setHiveWarehouseDir(warehouseDirectory)
     .setHiveConf(new HiveConf())
     .build()
 

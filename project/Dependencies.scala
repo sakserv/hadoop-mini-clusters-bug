@@ -20,9 +20,16 @@ object Dependencies {
   )
 
   val testClusterDependencies = Seq(
-    "com.github.sakserv" % "hadoop-mini-clusters"           % miniClusterVersion % Test,
-    "com.github.sakserv" % "hadoop-mini-clusters-common"    % miniClusterVersion % Test,
-    "com.github.sakserv" % "hadoop-mini-clusters-hivemetastore"      % miniClusterVersion % Test,
+    "com.github.sakserv" % "hadoop-mini-clusters"               % miniClusterVersion % Test,
+    "com.github.sakserv" % "hadoop-mini-clusters-common"        % miniClusterVersion % Test,
+    "com.github.sakserv" % "hadoop-mini-clusters-hivemetastore" % miniClusterVersion % Test,
+  )
+  
+  
+  val overrides = Seq(
+    "org.datanucleus" % "datanucleus-api-jdo" % "4.2.1",
+    "org.datanucleus" % "datanucleus-rdbms"   % "4.1.7",
+    "org.datanucleus" % "datanucleus-core"    % "4.1.6"
   )
 
 }
