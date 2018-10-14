@@ -24,6 +24,8 @@ object HiveMetastoreSpec {
     .setHiveConf(new HiveConf())
     .build()
 
+  val hiveConf = instance.getHiveConf
+
   private val started = new AtomicBoolean(false)
 
   def start() = {

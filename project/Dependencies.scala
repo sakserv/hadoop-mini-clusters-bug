@@ -12,7 +12,7 @@ object Dependencies {
   val sparkDependencies = Seq(
     "org.apache.spark" %% "spark-core" % sparkHDPVersion,
     "org.apache.spark" %% "spark-sql"  % sparkHDPVersion,
-    "org.apache.spark" %% "spark-hive" % sparkHDPVersion
+    "org.apache.spark" %% "spark-hive" % sparkHDPVersion  exclude("org.spark-project.hive", "hive-metastore") exclude("org.spark-project.hive", "hive-exec")
   )
 
   val testDependencies = Seq(
